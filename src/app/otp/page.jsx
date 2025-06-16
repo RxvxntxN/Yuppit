@@ -3,6 +3,9 @@ import {Suspense} from "react";
 import {useState} from "react";
 import {useSearchParams, useRouter} from "next/navigation";
 
+// Force dynamic rendering - this prevents static generation
+export const dynamic = "force-dynamic";
+
 function OTPForm() {
   const [otp, setOtp] = useState("");
   const [message, setMessage] = useState("");
